@@ -1,0 +1,12 @@
+@use 'base/reset';
+@use '../config' as *; // ← customize the framework
+
+// ↓ copy & modify these templates locally
+@use 'base/typography';
+@use 'base/icons';
+@use 'base/buttons';
+@use 'base/forms';
+
+// ← import here the CodyHouse components
+
+@use 'base/util'; // ← utility classes

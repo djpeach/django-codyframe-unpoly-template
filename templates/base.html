@@ -1,0 +1,33 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+      document.getElementsByTagName("html")[0].className += " js";
+  </script>
+  <!-- <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"> -->
+  <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles/unpoly.min.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+  <title>{% block title %}{{ title|default:"My Project" }}{% endblock %}</title>
+</head>
+
+<body>
+
+{% block content %}
+{% endblock %}
+
+<script src="{% static 'js/unpoly.min.js' %}"></script>
+<script src="{% static 'js/codyframe.js' %}"></script>
+<script>
+    // enable logs for unpoly (remove for production)
+    up.log.enable()
+</script>
+</body>
+
+</html>
